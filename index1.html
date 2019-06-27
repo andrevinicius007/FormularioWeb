@@ -11,20 +11,12 @@
 		<meta name="description" content="">
 		<meta name="author" content="devin">
 		<link rel="stylesheet" type="text/css" href="index_css.css" />
+		<script src="validacao.js"></script>
 		<meta name="viewport" content="width=device-width; initial-scale=1.0">
 
 		<!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
 		<link rel="shortcut icon" href="/favicon.ico">
 		<link rel="apple-touch-icon" href="/apple-touch-icon.png">
-		<script type="text/javascript">
-		function Muda_Cor(botao){
-			botao.innerHTML = "Ola"
-		}
-		function Maiuscula() {
-			var x = document.getElementById("nome");
-			x.value = x.value.toUpperCase();
-		}
-		</script>
 	</head>
 
 	<body>
@@ -39,11 +31,11 @@
 		</div>
 		-->
 		<div>
-			<form name="formulario" method="post" action="pag1.php" autocomplete="off">
+			<form name="formulario" method="post" action="pag1.php" autocomplete="off" required>
 				<fieldset>
 					<h1 class="form_titulo"> Cadastro de Usuários </h1>
 					<div class="form_div">
-						<input type="text" id="nome" name="nome" class="form_input" placeholder="Digite seu nome..." onchange="Maiuscula(this)" required>
+						<input type="text" id="nome" name="nome" class="form_input" placeholder="Digite seu nome..." onchange="Maiuscula(this)" onchange="Validacao(this)" required>
 						<br />
 					</div>
 					<div id="form_sexo">
@@ -57,7 +49,7 @@
 						<input type="text" name="cidade" class="form_input" placeholder="Digite sua cidade..." required/>
 					</div>
 					<div onfocus="Muda_Cor(this)">
-						<input type="submit" class="form_button" value="Cadastrar"/>
+						<input type="submit" class="form_button" value="Cadastrar" onclick="Validacao()"/>
 					</div>
 				</fieldset>
 			</form>
