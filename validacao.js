@@ -37,3 +37,15 @@ function Validar_cpf(){
 function Cor_Original(){
     document.getElementById('teste').style.backgroundColor = 'gray'
 }
+
+function Cadastrar(){
+    inputM = document.getElementById('M').checked
+    inputF = document.getElementById('F').checked
+    if(inputF == false && inputM == false){
+        alert("Selecione seu sexo.")
+        return false
+    }else{
+        alert("Cadastro realizado com sucesso!!!")
+        return true
+    }
+}

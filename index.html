@@ -33,7 +33,7 @@
 		</div>
 		-->
 		<div>
-			<form name="formulario" method="post" action="pag1.html" autocomplete="off" required>
+			<form name="formulario" action="#">
 				<fieldset>
 					<h1 class="form_titulo"> Cadastro de Usuários </h1>
 					<div class="form_div">
@@ -44,8 +44,8 @@
 						<br>
 					</div>
 					<div id="form_sexo">
-						<input type="radio" name="sexo" value="M" />Masculino
-						<input type="radio" name="sexo" value="F" />Feminino<br/>
+						<input type="radio" name="sexo" id="M" value="M" />Masculino
+						<input type="radio" name="sexo" id="F" value="F" />Feminino<br/>
 					</div>
 					<div class="form_div">
 						<input type="email" name="email" class="form_input" placeholder="Digite seu email..." required/>
@@ -54,7 +54,7 @@
 						<input type="text" id="cidade" name="cidade" class="form_input" placeholder="Digite sua cidade..." onchange="Maiuscula('cidade')" onkeypress="return Validacao()" required/>
 					</div>
 					<div onmouseover="Muda_Cor(this)" onmouseout="Cor_Original(this)" id="teste">
-						<input type="submit" class="form_button" value="Cadastrar"/>
+						<input type="submit" onclick="return Cadastrar()" class="form_button" value="Cadastrar"/>
 					</div>
 				</fieldset>
 			</form>
